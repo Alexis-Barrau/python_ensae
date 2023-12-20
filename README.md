@@ -7,27 +7,27 @@ But: Ce projet Python se concentre sur la prédiction du statut d'emploi en se b
 
 ## Structure du Projet
 
-1. Statistiques descriptives
+### I -  Statistiques descriptives
 
 
 
-3. Réduction de Dimensionnalité avec PCA
+### II - Réduction de Dimensionnalité avec PCA
 Dans la première section, l'Analyse en Composantes Principales (PCA) est appliquée aux caractéristiques socio-démographiques à l'aide de la classe PCA de la bibliothèque scikit-learn. Le scree plot est visualisé pour montrer la variance expliquée par chaque composante principale.
 
-4. Modelisation
+ ### III - Modelisation
 
-  A. Support Vector Machine   
+#### A - Support Vector Machine   
   Le modèle SVM est mis en œuvre pour prédire le statut d'emploi. Le projet explore l'impact du paramètre de régularisation (C) sur les performances du modèle en utilisant une plage de     valeurs. La méthode GridSearchCV est ensuite utilisée pour ajuster finement le paramètre de régularisation, aboutissant à un modèle SVM optimisé.
 
-  B. Régression Logistique
+#### B - Régression Logistique
   Le projet examine également l'utilisation de la Régression Logistique pour prédire le statut d'emploi. Similaire à la section SVM, le paramètre de régularisation (C) est varié pour       observer son effet sur la précision du modèle. GridSearchCV est à nouveau utilisé pour trouver la combinaison optimale d'hyperparamètres pour la Régression Logistique.
   
-  C. Sélection de Variables avec Lasso
+#### C - Sélection de Variables avec Lasso
   Un modèle linéaire Lasso avec sélection croisée du paramètre de régularisation est mis en œuvre pour sélectionner un sous-ensemble des variables les plus influentes. Le nombre de         caractéristiques sélectionnées est limité à 10 pour éviter le surajustement.
 
-  D. Prédiction Actif/Inactif
+#### D - Prédiction Actif/Inactif
   Reconnaissant les défis liés à la prédiction du statut d'emploi, en particulier la distinction entre les chômeurs de courte durée et les actifs occupés, le projet tente de prédire le     statut "actif" séparément. Cela implique la construction d'un prédicteur pour être "actif" et la comparaison de la qualité de la prédiction.
-
+  
 ## Utilisation
 
 Pour reproduire les résultats, suivez les étapes décrites dans le notebook Jupyter fourni. N'hésitez pas à reprendre et à étendre ce projet pour explorer d'autres questions ou améliorer la prédiction.
