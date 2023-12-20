@@ -23,6 +23,6 @@ Enfin, reconnaissant les défis liés à la prédiction du statut d'emploi, en p
   
 ## Utilisation
 
-Pour reproduire les résultats, suivez les étapes décrites dans le notebook Jupyter fourni. N'hésitez pas à adapter et étendre ce projet pour explorer d'autres questions ou améliorer la prédiction en utilisant différentes approches de ML.
+Pour reproduire les résultats, suivez les étapes décrites dans le notebook Jupyter "Main notebook" fourni. N'hésitez pas à adapter et étendre ce projet pour explorer d'autres questions ou améliorer la prédiction en utilisant différentes approches de ML.
 
 
