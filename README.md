@@ -1,5 +1,4 @@
-# python_ensae
-Prédiction du Statut d'Emploi à l'aide des Caractéristiques Socio-démographiques
+# Explorer les possiblités de l'enquête emploi
 
 Groupe Moisan, Guillon, Barrau
 
