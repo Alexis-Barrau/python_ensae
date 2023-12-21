@@ -71,7 +71,7 @@ EEC_2019 = EEC_2019.drop(['METRODOM', 'ENFRED' , 'COURED', 'SEXE',"ACTEU"], axis
 EEC_2020 = EEC_2020.drop(['METRODOM', 'ENFRED' , 'COURED', 'SEXE',"ACTEU"], axis=1)
 
 #On prends un sous-ensemble,mais cette fois de 50 000
-EEC_2019_subsample = EEC_2019.sample(n=50000, random_state=3) 
+EEC_2019_subsample = EEC_2019.sample(n=10000, random_state=3) 
 
 #Création de nos arrays de train et de test
 X = np.array(EEC_2019_subsample.drop(columns=["ACTIF","EMPLOI","ANNEE", "TRIM"]))
@@ -139,7 +139,8 @@ disp = ConfusionMatrixDisplay(
             confusion_matrix=cm,
             display_labels=clf.classes_
        )
-disp.savefig(f"Results/SVM/Confusion Matrix subsample for C={gs.best_params_}.png")
+disp.plot()
+plt.savefig(f"Results/SVM/Confusion Matrix subsample for C={gs.best_params_}.png")
 
 #fit sur total et matrice de confusion
 #On essaie ici de regarder ce que cela donne sur l'ensemble de la base 2019 dès lors que l'on prends en compte l'ensemble des observations
@@ -151,7 +152,8 @@ disp = ConfusionMatrixDisplay(
             confusion_matrix=cm,
             display_labels=clf.classes_
        )
-disp.savefig(f"Results/SVM/Confusion Matrix 2019 for C={gs.best_params_}.png")
+disp.plot()
+plt.savefig(f"Results/SVM/Confusion Matrix 2019 for C={gs.best_params_}.png")
 
 #fit sur 2019 précision 2020
 clf.fit(X_total, y_total)
@@ -161,7 +163,8 @@ disp = ConfusionMatrixDisplay(
             confusion_matrix=cm,
             display_labels=clf.classes_
        )
-disp.savefig("Results/SVM/Confusion Matrix 2020 fit 2019")
+disp.plot()
+plt.savefig("Results/SVM/Confusion Matrix 2020 fit 2019")
 
 ## Modélisation logistique
 
@@ -211,7 +214,8 @@ disp = ConfusionMatrixDisplay(
             confusion_matrix=cm,
             display_labels=clf.classes_
        )
-disp.savefig(f"Results/logistique/Confusion Matrix subsample for C={gs.best_params_}.png")
+disp.plot()
+plt.savefig(f"Results/logistique/Confusion Matrix subsample for C={gs.best_params_}.png")
 
 #fit sur total et matrice de confusion
 clf.fit(X_train_total, y_train_total)
@@ -221,7 +225,8 @@ disp = ConfusionMatrixDisplay(
             confusion_matrix=cm,
             display_labels=clf.classes_
        )
-disp.savefig(f"Results/logistique/Confusion Matrix subsample for C={gs.best_params_}.png")
+disp.plot()
+plt.savefig(f"Results/logistique/Confusion Matrix subsample for C={gs.best_params_}.png")
 
 #fit sur 2019 précision 2020
 clf.fit(X_total, y_total)
@@ -231,4 +236,5 @@ disp = ConfusionMatrixDisplay(
             confusion_matrix=cm,
             display_labels=clf.classes_
        )
-disp.savefig("Results/logistique/Confusion Matrix 2020 fit 2019")
+disp.plot()
+plt.savefig("Results/logistique/Confusion Matrix 2020 fit 2019")
