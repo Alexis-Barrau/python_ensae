@@ -7,11 +7,11 @@ But: Ce projet Python cherche à prédire le fait d'être en emploi à partir de
 ## Structure du Projet
 
 ### I -  Statistiques descriptives
-Dans la première section, 
+Dans la première section, étude de variables clefs dans la prédiction du statut d'activité : sexe, catégorie socioprofessionnelle, âge, catégorie de commune.  
 
 
 ### II - Réduction de Dimensionnalité avec PCA
-Dans cette seconde section, l'Analyse en Composantes Principales (PCA) est appliquée aux caractéristiques socio-démographiques que sont  ... .  Un graphique présente ainsi la variance expliquée par chaque composante principale.
+Dans cette seconde section, l'analyse en composantes principales est appliquée aux caractéristiques socio-démographiques que sont le sexe, le niveau d'études, la catégorie socioprofessionnelle, la nationalité, le nombre d'heures travaillées voulues, l'ancienneté du chômage, l'âge, la catégorie de la commune, des variables familialles (couple ? enfants ?) et l'implication dans la recherche d'emploi. Un graphique présente la variance expliquée pour chaque composante principale et on représente ses variables selon les deux composantes principales.
 
  ### III - Modelisation
 
