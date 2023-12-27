@@ -2,7 +2,7 @@
 
 Groupe Moisan, Guillon, Barrau
 
-But: Ce projet Python cherche à prédire le fait d'être en emploi à partir des caractéristiques socio-démographiques, en utilisant les enquêtes emploi de 2019 et 2020
+But: Ce projet Python cherche à prédire le fait d'être en emploi à partir des caractéristiques socio-démographiques, en utilisant principalement l'enquêtes emploi de 2019 et en testant le(s) prédicteur(s) ainsi construit(s) sur les données de 2020.
 
 ## Structure du Projet
 
@@ -10,7 +10,7 @@ But: Ce projet Python cherche à prédire le fait d'être en emploi à partir de
 Dans la première section, étude de variables clefs dans la prédiction du statut d'activité : sexe, catégorie socioprofessionnelle, âge, catégorie de commune.  
 
 
-### II - Réduction de Dimensionnalité avec PCA
+### II - Réduction de Dimensionnalité avec ACP
 Dans cette seconde section, l'analyse en composantes principales est appliquée aux caractéristiques socio-démographiques que sont le sexe, le niveau d'études, la catégorie socioprofessionnelle, la nationalité, le nombre d'heures travaillées voulues, l'ancienneté du chômage, l'âge, la catégorie de la commune, des variables familialles (couple ? enfants ?) et l'implication dans la recherche d'emploi. Un graphique présente la variance expliquée pour chaque composante principale et on représente ses variables selon les deux composantes principales.
 
  ### III - Modelisation

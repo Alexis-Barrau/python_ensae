@@ -226,7 +226,7 @@ disp = ConfusionMatrixDisplay(
             display_labels=clf.classes_
        )
 disp.plot()
-plt.savefig(f"Results/logistique/Confusion Matrix subsample for C={gs.best_params_}.png")
+plt.savefig(f"Results/logistique/Confusion Matrix for C={gs.best_params_}.png")
 
 #fit sur 2019 précision 2020
 clf.fit(X_total, y_total)
