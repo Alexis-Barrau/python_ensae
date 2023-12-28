@@ -1,5 +1,5 @@
-#Ce script reprends les principales étapes de notre notebook sur la partie modélisation,
-#Simplement, le choix est fait ici de fit sur la base entière, et non sur le subsample
+#Ce script reprends les principales étapes de notre notebook sur la partie modélisation, sous partie B et C (SVM et régression logistique)
+#Simplement, le choix est fait ici de fit sur la base entière(soit en divisant train et test en 2019, soit en utilisant 2019 en train et 2020 en test), et non sur le subsample
 #La partie de recherche du paramètre de régularisation, comme des meilleurs paramètres, est faites sur le subsample pour maintenir un temps de calcul acceptable
 
 import pandas as pd
@@ -70,7 +70,7 @@ EEC_2020['DOM'] = EEC_2020['METRODOM'].apply(lambda x: x == 2)
 EEC_2019 = EEC_2019.drop(['METRODOM', 'ENFRED' , 'COURED', 'SEXE',"ACTEU"], axis=1)
 EEC_2020 = EEC_2020.drop(['METRODOM', 'ENFRED' , 'COURED', 'SEXE',"ACTEU"], axis=1)
 
-#On prends un sous-ensemble,mais cette fois de 50 000
+#On prends un sous-ensemble
 EEC_2019_subsample = EEC_2019.sample(n=10000, random_state=3) 
 
 #Création de nos arrays de train et de test
